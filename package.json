@@ -1,0 +1,30 @@
+{
+  "name": "wordcount",
+  "version": "1.0.0",
+  "author" : "0x12345678",
+  "binaryDigest" : "",
+  "sourceCodeFile" : "gnfd://xxxxx/main.c",
+  "sourceCodeDigest" : "0xeded4495cf0f35ceb7412f8783567223",
+  "abi" : {
+    "entry" : "main",
+    "signature" : "V(char*, char*)",
+  },
+  "data" : {
+    "read" : "gnfd://",
+    "write" : "gnfd://",
+    "create" : "gnfd://"
+  },
+  "capabilities" : {
+    "fileOps" : {
+      "nativeFile":{ "read" : true, "write" : true, "create" : true },
+      "gnfdFile":{"read" :  true, "write" :  true, "create" :  true},
+    }
+  }
+  "resources" : {
+    "CPU" : "1C1T"
+    "RAM" : "2GB"
+  }
+  "deployment" : {
+    "base" : "alpine-wamr"
+  }
+}

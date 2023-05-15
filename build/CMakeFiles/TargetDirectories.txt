@@ -1,0 +1,3 @@
+/Users/david/source/david/GreenfieldExecutablePOC/wordcount_pure/build/CMakeFiles/word_count.dir
+/Users/david/source/david/GreenfieldExecutablePOC/wordcount_pure/build/CMakeFiles/edit_cache.dir
+/Users/david/source/david/GreenfieldExecutablePOC/wordcount_pure/build/CMakeFiles/rebuild_cache.dir

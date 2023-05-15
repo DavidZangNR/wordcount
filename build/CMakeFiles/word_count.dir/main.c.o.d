@@ -1,0 +1,22 @@
+CMakeFiles/word_count.dir/main.c.o: \
+  /Users/david/source/david/GreenfieldExecutablePOC/wordcount_pure/main.c \
+  /Users/david/source/david/wasm/wasi-sysroot/include/stdio.h \
+  /Users/david/source/david/wasm/wasi-sysroot/include/features.h \
+  /Users/david/source/david/wasm/wasi-sysroot/include/bits/alltypes.h \
+  /Users/david/source/david/wasm/wasi-sysroot/include/__struct_timeval.h \
+  /Users/david/source/david/wasm/wasi-sysroot/include/__typedef_time_t.h \
+  /Users/david/source/david/wasm/wasi-sysroot/include/__typedef_suseconds_t.h \
+  /Users/david/source/david/wasm/wasi-sysroot/include/__struct_timespec.h \
+  /Users/david/source/david/wasm/wasi-sysroot/include/__struct_iovec.h \
+  /opt/homebrew/Cellar/llvm/16.0.3/lib/clang/16/include/stddef.h \
+  /Users/david/source/david/wasm/wasi-sysroot/include/__seek.h \
+  /Users/david/source/david/wasm/wasi-sysroot/include/wasi/api.h \
+  /opt/homebrew/Cellar/llvm/16.0.3/lib/clang/16/include/__stddef_max_align_t.h \
+  /opt/homebrew/Cellar/llvm/16.0.3/lib/clang/16/include/stdint.h \
+  /Users/david/source/david/wasm/wasi-sysroot/include/stdint.h \
+  /Users/david/source/david/wasm/wasi-sysroot/include/bits/stdint.h \
+  /Users/david/source/david/wasm/wasi-sysroot/include/stdlib.h \
+  /Users/david/source/david/wasm/wasi-sysroot/include/__functions_malloc.h \
+  /Users/david/source/david/wasm/wasi-sysroot/include/__header_stdlib.h \
+  /Users/david/source/david/wasm/wasi-sysroot/include/alloca.h \
+  /Users/david/source/david/wasm/wasi-sysroot/include/ctype.h
