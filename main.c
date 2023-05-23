@@ -1,43 +1,69 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
+#include <fcntl.h>
+#include <unistd.h>
 
-int main(int argc, char *argv[]) {
-    if (argc != 3) {
-        printf("Usage: %s input_file output_file\n", argv[0]);
-        return 1;
-    }
+#define BUFFER_SIZE 1024
 
-    FILE *input_file = fopen(argv[1], "r");
-    if (input_file == NULL) {
-        printf("Error: failed to open input file '%s'\n", argv[1]);
-        return 1;
-    }
+int countWords(int fd) {
+    char buffer[BUFFER_SIZE];
+    int bytesRead, totalWords = 0;
+    int inWord = 0;
 
-    FILE *output_file = fopen(argv[2], "w");
-    if (output_file == NULL) {
-        printf("Error: failed to open output file '%s'\n", argv[2]);
-        fclose(input_file);
-        return 1;
-    }
-
-    int word_count = 0;
-    int in_word = 0;
-    int c;
-
-    while ((c = fgetc(input_file)) != EOF) {
-        if (isspace(c)) {
-            in_word = 0;
-        } else if (!in_word) {
-            in_word = 1;
-            word_count++;
+    while ((bytesRead = read(fd, buffer, BUFFER_SIZE)) > 0) {
+        for (int i = 0; i < bytesRead; i++) {
+            if (buffer[i] == ' ' || buffer[i] == '\t' || buffer[i] == '\n') {
+                inWord = 0;
+            } else {
+                if (!inWord) {
+                    inWord = 1;
+                    totalWords++;
+                }
+            }
         }
     }
 
-    fprintf(output_file, "Word count: %d\n", word_count);
+    return totalWords;
+}
 
-    fclose(input_file);
-    fclose(output_file);
+int main(int argc, char *argv[]) {
+    if (argc < 3) {
+        printf("Usage: %s <input_file> <output_file>\n", argv[0]);
+        return 1;
+    }
+
+    char *inputFile = argv[1];
+    char *outputFile = argv[2];
+
+    int inputFd = open(inputFile, O_RDONLY);
+    if (inputFd == -1) {
+        printf("Failed to open the input file: %s\n", inputFile);
+        return 1;
+    }
+
+    int wordCount = countWords(inputFd);
+
+    if (close(inputFd) == -1) {
+        printf("Failed to close the input file: %s\n", inputFile);
+        return 1;
+    }
+
+    int outputFd = open(outputFile, O_WRONLY | O_CREAT | O_TRUNC, 0644);
+    if (outputFd == -1) {
+        printf("Failed to open the output file: %s\n", outputFile);
+        return 1;
+    }
+
+    char resultBuffer[20];  // Buffer to hold the result as a string
+    int resultLength = snprintf(resultBuffer, sizeof(resultBuffer), "%d", wordCount);
+    if (write(outputFd, resultBuffer, resultLength) != resultLength) {
+        printf("Failed to write the result to the output file: %s\n", outputFile);
+        return 1;
+    }
+
+    if (close(outputFd) == -1) {
+        printf("Failed to close the output file: %s\n", outputFile);
+        return 1;
+    }
 
     return 0;
 }

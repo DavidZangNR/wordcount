@@ -17,26 +17,30 @@ CMakeFiles/word_count.dir/main.c.o: /Users/david/source/david/GreenfieldExecutab
   /opt/homebrew/Cellar/llvm/16.0.3/lib/clang/16/include/stdint.h \
   /Users/david/source/david/wasm/wasi-sysroot/include/stdint.h \
   /Users/david/source/david/wasm/wasi-sysroot/include/bits/stdint.h \
-  /Users/david/source/david/wasm/wasi-sysroot/include/stdlib.h \
-  /Users/david/source/david/wasm/wasi-sysroot/include/__functions_malloc.h \
-  /Users/david/source/david/wasm/wasi-sysroot/include/__header_stdlib.h \
-  /Users/david/source/david/wasm/wasi-sysroot/include/alloca.h \
-  /Users/david/source/david/wasm/wasi-sysroot/include/ctype.h
+  /Users/david/source/david/wasm/wasi-sysroot/include/fcntl.h \
+  /Users/david/source/david/wasm/wasi-sysroot/include/__header_fcntl.h \
+  /Users/david/source/david/wasm/wasi-sysroot/include/__mode_t.h \
+  /Users/david/source/david/wasm/wasi-sysroot/include/bits/fcntl.h \
+  /Users/david/source/david/wasm/wasi-sysroot/include/unistd.h \
+  /Users/david/source/david/wasm/wasi-sysroot/include/__header_unistd.h \
+  /Users/david/source/david/wasm/wasi-sysroot/include/bits/posix.h
 
 
-/Users/david/source/david/wasm/wasi-sysroot/include/ctype.h:
+/Users/david/source/david/wasm/wasi-sysroot/include/bits/posix.h:
 
-/Users/david/source/david/wasm/wasi-sysroot/include/__functions_malloc.h:
+/Users/david/source/david/wasm/wasi-sysroot/include/__header_unistd.h:
+
+/Users/david/source/david/wasm/wasi-sysroot/include/bits/fcntl.h:
+
+/Users/david/source/david/wasm/wasi-sysroot/include/unistd.h:
+
+/Users/david/source/david/wasm/wasi-sysroot/include/fcntl.h:
+
+/Users/david/source/david/wasm/wasi-sysroot/include/__mode_t.h:
 
 /Users/david/source/david/wasm/wasi-sysroot/include/bits/stdint.h:
 
-/Users/david/source/david/wasm/wasi-sysroot/include/alloca.h:
-
 /Users/david/source/david/wasm/wasi-sysroot/include/stdint.h:
-
-/Users/david/source/david/wasm/wasi-sysroot/include/__header_stdlib.h:
-
-/Users/david/source/david/wasm/wasi-sysroot/include/stdlib.h:
 
 /Users/david/source/david/wasm/wasi-sysroot/include/__struct_iovec.h:
 
@@ -45,6 +49,8 @@ CMakeFiles/word_count.dir/main.c.o: /Users/david/source/david/GreenfieldExecutab
 /Users/david/source/david/wasm/wasi-sysroot/include/__struct_timespec.h:
 
 /Users/david/source/david/wasm/wasi-sysroot/include/__typedef_suseconds_t.h:
+
+/Users/david/source/david/wasm/wasi-sysroot/include/__header_fcntl.h:
 
 /opt/homebrew/Cellar/llvm/16.0.3/lib/clang/16/include/stdint.h:
 
